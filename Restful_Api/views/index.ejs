@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest api</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>All Posts here: </h1>
+    <div>
+         <% for(let post of Posts){ %>
+            <div class="post">
+
+            <h2> @<%=post.username %> </h1>
+
+            <p> <%=post.content %> </p>
+            <br>
+            <a href="http://localhost:3000/posts/<%= post.id %>"> see post in detail </a>
+            </div>
+       <% } %>
+     
+                <br> 
+                <br>
+             <a href="http://localhost:3000/posts/new"> Create a new post</a>
+    </div>
+</body>
+</html>
